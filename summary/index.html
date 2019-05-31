@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Project SummaryWhat is my project?To illustrate, my project mainly involves the utilization of credit modeling, which is a prevalent date science prob">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="ewang">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="summary">
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="ewang&#39;s blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>summary - ewang&#39;s blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/summary">
+                    Project Summary
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        
+            <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+            <section class="main">
+                
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/summary/index.html">
+                summary
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-05-31</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Project-Summary"><a href="#Project-Summary" class="headerlink" title="Project Summary"></a>Project Summary</h1><h3 id="What-is-my-project"><a href="#What-is-my-project" class="headerlink" title="What is my project?"></a>What is my project?</h3><p>To illustrate, my project mainly involves the utilization of credit modeling, which is a prevalent date science problem that operates on modeling a borrower’s credit risk. All information and data that I deal with are manipulated from Lending club, which is a market place for borrowers and investors who are both either seeking or willing to provide a moderate amount of loans to each other. Thus, my main job is to     look through all the approved datas on lending club typically from 2007 to 2011, modify it into one dataset that includes all useful information, then generate features that enable me to create its matched algorithm and made the final predictions. </p>
+<h3 id="What-are-my-research-targets-and-research-method"><a href="#What-are-my-research-targets-and-research-method" class="headerlink" title="What are my research targets and research method?"></a>What are my research targets and research method?</h3><p>My primary research target focuses on potential possibility of a loan getting whether paid back on time or not from a variety of data that I gained through Lending Club. Since the primary purpose for most businessmen while dealing with loans is to gain money while trying to avoid losing it, I mainly focused on the mindset of those conservative investors, who only want to invest in loans that have a good chance of getting paid off on time. To achieve the final goal as I illustrated previously, I relied on following methods. Firstly, in order to enhance the efficiency in measuring future data and minimizing potential risks, I reduced the size of the original dataset by removing irrelevant columns that contain redundant information, aren’t useful for future modeling, require too much processing to be useful and leak future result. For instance, in the loan status column, which describes directly the condition of a loan whether it’s paid off or default, only the fully paid and charged off sections should be kept since they both describe the final outcome of the loans. In that case other irrelevant values or information such as “Grace period” or “Late” should be removed. After renaming my new modified datafile as filtered_loans_2007.csv, I start to concentrate on my next step, which is handling missing value and converting categorical columns to numerical columns. By using the null function in Pandas Data frame, I can easily get the precise number of missing values that each column has. Then, I utilize the “rstrip” method to strip the right trailing percent sign (%). At last, to achieve my goal in generating information to accomplish final prediction, I calculated the high recall (true positive rate) and low fall-out (false positive rate) since the original “loan_status” columns has a imbalanced number of loans that are paid off compared to the one that weren’t paid off on time. After that, through using the “logical regression”, which is a type of algorithm that is easy to interpret and quickly to train, I successfully generated the predictions. However, those data are overfit because I use the same data that I trained my model on. Therefore, by using the k-fold cross validation I can gain the accurate date information. </p>
+<h3 id="What-was-the-biggest-challenge-that-I-encountered-How-did-I-overcome-it"><a href="#What-was-the-biggest-challenge-that-I-encountered-How-did-I-overcome-it" class="headerlink" title="What was the biggest challenge that I encountered? How did I overcome it?"></a>What was the biggest challenge that I encountered? How did I overcome it?</h3><p>To me, since it’s my first time get in touch with python, or any computer science related program, those python basic principles like term definitions or typing rules have confused me a lot. Furthermore, certain terminology involved in Lending club and the way some functions play a role in my whole project have caused me some trouble to perceive. However, I have passion in learning and doing research on such area, and those obstacles are made for me to overcome in order to become better. Thus, I have spent a great amount of time looking through those formulas and principles during my free time and trying to understand them. Additionally I have asked  my tutors for extra helps for some more complex issues. </p>
+<h3 id="What-was-the-most-interesting-part-of-my-project"><a href="#What-was-the-most-interesting-part-of-my-project" class="headerlink" title="What was the most interesting part of my project?"></a>What was the most interesting part of my project?</h3><p>In my opinion, the most interesting part of my project can be the part when I started to focus on the true positive rate and false positive rate for two reasons. Firstly, to achieve that step I have already accumulated a decent amount of knowledges that help me to understand their purpose and meaning more efficiently. Besides, I really love math problem solving including calculating any kinds of information. Since those previous functions require some fundamental math solving methods, I’m relatively favored in the process of doing calculations and enjoyed the final achievement. </p>
+<h3 id="What-are-my-research-result-s-and-conclusion-s"><a href="#What-are-my-research-result-s-and-conclusion-s" class="headerlink" title="What are my research result(s) and conclusion(s)?"></a>What are my research result(s) and conclusion(s)?</h3><p>My final model has a false positive rate of 7 percent, and a true positive rate of 20 percent. This means that it will greatly benefit a conservative investor by making money as long as the interests rate is high enough to offset the losses from those 7 percent of defaulting, and 20 percent of borrowers is large enough to make enough interest money to offset losses. Moreover, although I have excluding more loans than any normal strategies had, there is approximately only 15 percent of chance for loans defaulting by certain borrowers. </p>
+<h3 id="What-have-I-learned-in-this-project-Anything-more-I-want-to-add"><a href="#What-have-I-learned-in-this-project-Anything-more-I-want-to-add" class="headerlink" title="What have I learned in this project? Anything more I want to add?"></a>What have I learned in this project? Anything more I want to add?</h3><p>I have learned the function and usefulness of python and the value of machine learning, which is really a very useful tool and area that particularly matched my interests in both engineering or our mathematic aspects. Also, I have gained a deeper knowledge in understanding the strategy investors used involved in lending club, as well as some calculating prediction methods. </p>
+<p>Overall, I have to say that I truly learned a lot through this project. At first I’m only interested in pure mathematics problem solving, while this project makes me recognized the significance and the function of computer science, especially the python. </p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+            </section>
+        
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/05/31/hello-world/">Hello World</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
